@@ -104,8 +104,9 @@ export default function App() {
         />
         <Button title="Select Photo" onPress={pickImage} />
         {currentProduct.photo.length > 0 &&
-          currentProduct.photo.map((photo) => (
+          currentProduct.photo.map((photo, i) => (
             <Image
+              key={i}
               source={{ uri: photo }}
               style={{ width: 100, height: 100, marginTop: 10 }}
             />
